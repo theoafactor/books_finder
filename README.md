@@ -8,8 +8,8 @@ Olu Adeyemo
 [Email](theoafactor@gmail.com)
 
 ## Version 
-### 1.0 
-This application will be updated frequently. You should clone this project and run <mark>git pull</mark> 
+### 1.1.0 
+This application will be updated frequently. You should clone this project and run **git pull**
 to get the latest code version
 
 Always refer to this document for latest information.
