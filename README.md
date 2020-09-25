@@ -8,17 +8,22 @@ Olu Adeyemo
 [Email](theoafactor@gmail.com)
 
 ## Version 
-### 1.1.0 
+### 1.2.1
 This application will be updated frequently. You should clone this project and run **git pull**
 to get the latest code version
 
 Always refer to this document for latest information.
 
-## Current Issues
-- Returns only 10 results.
-- No pagination is set
-- No API Key is used 
+## Important Updates 
+- Pagination added 
+- Returns 10 results per page but this can be adjusted. You can do this by adjusting **defaultMaxResults** in the scripts.js file
+- If you are not getting any response, you might need to set your API key.
+- ids attributes starting **"bs_"** are special and care should be taken when editing.
+
+
+## About API
+- No API Key is used during testing 
 
 ## License 
-You are free to download and use this source code for anything you wish.
+The MIT License (MIT)
 

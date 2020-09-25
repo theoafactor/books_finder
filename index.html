@@ -17,7 +17,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/styles.css" rel="stylesheet">
-
+    <link href="css/animations.css" rel="stylesheet">
   </head>
 
   <body>
@@ -51,7 +51,7 @@
     <div class="jumbotron">
       <div class="container">
         <h2>Find Books!</h2>
-        <form class='form-inline' id='search_books_form_id' method='GET'>
+        <form class='form-inline' id='bs_search_books_form_id' method='GET'>
         <input type='text' class='form-control' name='search_contents' placeholder="Enter book title" style='height: 50px; width: 80%;'>
         <button type='submit' class="btn btn-primary btn-lg">Search</button>
       </form>
@@ -62,11 +62,13 @@
 
     <div class="container main-container">
       <!-- Example row of columns -->
-      <div class="row">
-        
-                <div class='col-md-8' id='search_results_id'></div>
-
-
+      <div class="row main-row">
+                <div id='bs_search_result_info'></div>
+                <div id='bs_search_top_pagination_id'></div>
+                <div class='col-md-8' id='bs_search_results_id'>
+                  <h4>Nothing to show at the moment </h4>
+                  <h5>Search for something interesting ...</h5>
+                </div>
       </div>
 
       <hr>
