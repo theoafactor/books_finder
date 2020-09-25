@@ -28,20 +28,21 @@ const start = function(event, param = null, pageNumber, startIndex = defaultStar
 	const search = (search_content == null || search_content.length == 0) ? null : async() => {
 
 		//Adds Animation that loads before the search result is ready.
-		document.getElementById("bs_search_results_id").innerHTML = `<div class="sk-fading-circle">
-																  <div class="sk-circle1 sk-circle"></div>
-																  <div class="sk-circle2 sk-circle"></div>
-																  <div class="sk-circle3 sk-circle"></div>
-																  <div class="sk-circle4 sk-circle"></div>
-																  <div class="sk-circle5 sk-circle"></div>
-																  <div class="sk-circle6 sk-circle"></div>
-																  <div class="sk-circle7 sk-circle"></div>
-																  <div class="sk-circle8 sk-circle"></div>
-																  <div class="sk-circle9 sk-circle"></div>
-																  <div class="sk-circle10 sk-circle"></div>
-																  <div class="sk-circle11 sk-circle"></div>
-																  <div class="sk-circle12 sk-circle"></div>
-																</div>`;
+		document.getElementById("bs_search_results_id")
+		.innerHTML = `<div class="sk-fading-circle">
+						  <div class="sk-circle1 sk-circle"></div>
+						  <div class="sk-circle2 sk-circle"></div>
+					      <div class="sk-circle3 sk-circle"></div>
+						  <div class="sk-circle4 sk-circle"></div>
+						  <div class="sk-circle5 sk-circle"></div>
+						  <div class="sk-circle6 sk-circle"></div>
+						  <div class="sk-circle7 sk-circle"></div>
+						  <div class="sk-circle8 sk-circle"></div>
+						  <div class="sk-circle9 sk-circle"></div>
+						  <div class="sk-circle10 sk-circle"></div>
+						  <div class="sk-circle11 sk-circle"></div>
+						  <div class="sk-circle12 sk-circle"></div>
+					  </div>`;
 
 
 		//Connect to the API..
@@ -95,7 +96,7 @@ const start = function(event, param = null, pageNumber, startIndex = defaultStar
 			if(result.totalItems > maxResults){
 				//pagination MUST be set ...
 				//divide the totalItems by maxResults..
-				boxesNumber = Math.floor(result.totalItems / maxResults);
+				boxesNumber = Math.ceil(result.totalItems / maxResults);
 
 				console.log("Number of boxes: ", boxesNumber);
 
