@@ -1,5 +1,5 @@
 # Books Finder 
-## Simple Application that searches for book online 
+## Simple Application that searches for books online 
 All written in JavaScript 
 
 ## Author 
@@ -22,7 +22,7 @@ Always refer to this document for latest information.
 
 
 ## About API
-- No API Key is used during testing 
+- No API Key was used during testing 
 
 ## License 
 The MIT License (MIT)
