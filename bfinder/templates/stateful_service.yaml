@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: statefulservice
+spec:
+  clusterIP: None # this is a headless service meaning no cluster IP <--
+  selector:
+    app: statefulservice
+  ports:
+  - port: 80
+    targetPort: 80
