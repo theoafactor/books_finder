@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: booksfinder
+spec:
+  selector:
+    matchLabels:
+      app: booksfinder
+  template:
+    metadata:
+      labels:
+        app: booksfinder
+    spec:
+      containers:
+      - name: booksfinder
+        image: seun007/books:1
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
