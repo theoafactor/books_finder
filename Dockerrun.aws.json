@@ -1,0 +1,13 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+      "Name": "booksfinder_test:1"
+    },
+    "Ports": [
+      {
+        "ContainerPort": 80,
+        "HostPort": 80
+      }
+    ],
+    "Logging": "/usr/local/booksfinder/domains/domain1/logs"
+  }
