@@ -12,7 +12,7 @@ jobs:
         
             - name: "Build the image"
               run: |
-                sudo docker build -t theoafactor/testbooksfinder:latest .
+                sudo docker build -t theoafactor/testbooksfinder:second .
 
             - name: "Log in to Docker Hub"
               run: |
@@ -20,7 +20,7 @@ jobs:
 
             - name: "Push to Docker Hub"
               run: |
-                sudo docker push theoafactor/testbooksfinder:latest
+                sudo docker push theoafactor/testbooksfinder:second
 
             - name: "Test Okay"
               run: |
