@@ -16,7 +16,7 @@ jobs:
 
             - name: "Push to Docker Hub"
               run: |
-                sudo docker push theoafactor theoafactor/testbooksfinder:latest
+                sudo docker push theoafactor/testbooksfinder:latest
 
             - name: "Test Okay"
               run: |
