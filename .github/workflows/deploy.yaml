@@ -5,7 +5,7 @@ on:
             - deploy2
 jobs: 
     app_deployment:
-        runs-on: ubunty-latest
+        runs-on: ubuntu-latest
         steps:
         - name: 'Checkout the repo'
           uses: actions/checkout@v4
