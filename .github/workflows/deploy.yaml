@@ -32,7 +32,13 @@ jobs:
             echo "$SSH_KEY" > ssh_key && chmod 600 ssh_key
             ssh -o StrictHostKeyChecking=no -i ssh_key ubuntu@ec2-52-90-75-73.compute-1.amazonaws.com '
             
-            sudo apt-get update
+            sudo apt-get update && 
+            sudo apt-get install ca-certificates curl -y &&
+            sudo install -m 0755 -d /etc/apt/keyrings && 
+            sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc &&
+            sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+
     
             '
         
