@@ -1,0 +1,32 @@
+name: Deployment
+on:
+    push:
+        branches:
+            - master
+jobs: 
+    app_deployment:
+        runs-on: ubunty-latest
+        steps:
+        - name: 'Checkout the repo'
+          uses: actions/checkout@v4
+          
+        - name: "Build an image"
+          run: |
+            docker build -t theoafactor/booksfinder:1123 .
+            
+        - name: 'Log into Docker'
+          run: |
+            docker login -u ${{ secrets.DOCKERHUB_USERNAME }} or -p ${{ secrets.DOCKERHUB_PASSWORD }}
+
+        - name: "Push the image to Docker Hub"
+          run: |
+            docker push theoafactor/booksfinder:1123
+
+        - name: "SSH into EC2 instance"
+          run: |
+            ssh -o StrictHostKeyChecking=no -i ${{ secrets.EC2_PRIVATE_KEY }} ubuntu@ec2-52-90-75-73.compute-1.amazonaws.com '
+            
+            sudo apt-get update
+            
+            '
+        
