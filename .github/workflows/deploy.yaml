@@ -21,7 +21,7 @@ jobs:
             version=$( echo $RANDOM )
 
             ## store this variable to $GITHUB_OUTPUT  global environmental variable
-            echo $version >> $GITHUB_OUTPUT
+            echo version >> $GITHUB_OUTPUT
 
         
         - name: "Use the version generated in the step above"
