@@ -18,10 +18,10 @@ jobs:
             ## get the random version 
             ## make an API call to the server to get last release ..
             ## Or Use RANDOM 
-            version=$( echo $RANDOM )
+            echo "version=$( echo $RANDOM )" >> $GITHUB_OUTPUT
 
             ## store this variable to $GITHUB_OUTPUT  global environmental variable
-            echo version >> $GITHUB_OUTPUT
+            # echo version >> $GITHUB_OUTPUT
 
         
         - name: "Use the version generated in the step above"
